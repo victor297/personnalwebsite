@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>SAMMY|CODE</title>
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+</head>
+<body>
+
+<div class="background">
+
+	<div class="nav">
+		<a class="a active" href="#">HOME</a>
+        <a class="e" href="#">LEARN</a>
+		<a class="b" href="#">ABOUT ME</a>
+		<a class="c" href="#">GALLERY</a>
+		<a class="d" href="#">CONTACT US</a>
+    </div>
+	
+  <div class="content">
+
+	<div class="home">
+		<h1>I AM SAMMY ROVA</h1>
+		<h3>Basic Programmer</h3>
+    </div>
+
+ <div>
+    <div class="start">
+        <a href="html.html">CSS</a>
+        <a href="css.html">HTML</a>
+        <a href="java.html">JAVASCRIPT</a>
+        <a href="">PYTHON</a>
+        <div>
+        <video src="videos/css.mp4" width="600" height="400" controls></video>
+        <p class="hint"><b>NOTE:</b>video hint about css</p>
+       </div>
+    </div>
+</div>
+
+    <div class="aboutus">
+    	<p><b>Hello Friends,</b> <br>
+    		Welcome to my page <b>(learn basic programming)</b>. <br>
+    		<b>BASIC</b> (an acronym for Beginner's All-purpose Symbolic Instruction Code)[2] is a family of general-purpose, high-level programming languages whose design philosophy emphasizes ease of use. <br>
+    		so please visit my page regularly for new updates.</p>
+        <p> Programming languages allow people to give instructions to a computer with commands that both the computer and the programmer can understand. Different programming languages use different commands and different rules for entering those commands; similar to the way people speak different words to each other with the same meaning. One person may say "hello", while another says "hola", which appear different but express the same thought.</p>
+    </div>
+
+    <div class="gallery">
+     	 <div class="image">
+     	 	 <a href="images/1.jpg" target="images/1.jpg"><img src="images/1.jpg" /> </a>
+     	 </div>
+     	  <div class="image">
+     	 	 <img src="images/2.jpg" />
+     	 </div>
+     	  <div class="image">
+     	 	 <img src="images/3.jpg" />
+     	 </div>
+     	  <div class="image">
+     	 	 <img src="images/4.jpg" />
+     	 </div>
+     	  <div class="image">
+     	 	 <img src="images/5.jpg" />
+     	 </div>
+     	  <div class="image">
+     	 	 <img src="images/6.jpg" />
+     	 </div>
+     	  <div class="image">
+     	 	 <img src="images/11.jpg" />
+     	 </div>
+     	  <div class="image">
+     	 	 <img src="images/1.jpg" />
+     	 </div>
+     	  <div class="image">
+     	 	 <img src="images/2.jpg" />
+     	 </div>
+    </div>
+
+    <div class="contactus">
+        <form action="" method="post">
+            <input type="text" name="" class="inputtext" value="First Name">
+            <input type="text" name="" class="inputtext" value="Last Name">
+            <input type="text" name="" class="inputtext" value="Your Email">
+            <textarea cols="4" rows="6" class="inputmessage">Your Messages...!!!</textarea>
+           <a href="submit.html"> <input type="button" name="" class="submitbutton" value="submit"></a>
+        </form>
+    </div>
+</div>
+
+</div>
+
+<script type="text/javascript" src="js/jquery-3.3.1.js"></script>
+<script type="text/javascript">
+	
+	$(document).ready(function(){
+        $('a').click(function(){
+        	//alert("i am click");
+        	var selected = $(this);
+        	$('a').removeClass('active');
+        	$(selected).addClass('active');
+        });
+
+        var $a = $('.a'),
+        $e = $('.e'),
+        $b = $('.b'),
+        $c = $('.c'),
+        $d = $('.d'),
+        $home = $('.home'),
+        $aboutus = $('.aboutus'),
+        $gallery = $('.gallery'),
+        $contactus = $('.contactus');
+        $start = $('.start');
+
+        $a.click(function(){
+        	$home.fadeIn();
+        	$aboutus.fadeOut();
+        	$gallery.fadeOut();
+        	$contactus.fadeOut();
+            $start.fadeOut();
+        });
+        $b.click(function(){
+        	$aboutus.fadeIn();
+        	$home.fadeOut();
+        	$gallery.fadeOut();
+        	$contactus.fadeOut();
+            $start.fadeOut();
+        });
+        $c.click(function(){
+        	$gallery.fadeIn();
+        	$home.fadeOut();
+        	$aboutus.fadeOut();
+        	$contactus.fadeOut();
+            $start.fadeOut();
+        });
+        $d.click(function(){
+        	$contactus.fadeIn();
+        	$home.fadeOut();
+        	$gallery.fadeOut();
+        	$aboutus.fadeOut();
+            $start.fadeOut();
+        });
+        $e.click(function(){
+            $start.fadeIn();
+            $home.fadeOut();
+            $aboutus.fadeOut();
+            $gallery.fadeOut();
+            $contactus.fadeOut();
+        });
+	});
+
+</script>
+
+
+
+</body>
+</html>
